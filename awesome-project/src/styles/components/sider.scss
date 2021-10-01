@@ -1,0 +1,12 @@
+.tt_boutuon {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  float: left;
+  background-color: blue;
+
+  .bouton {
+    width: 35%;
+    float: left;
+  }
+}

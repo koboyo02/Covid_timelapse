@@ -1,0 +1,26 @@
+.map_image {
+    width: 50%;
+    float: left;
+}
+
+.map_image path {
+    fill: blue;
+    stroke: aliceblue;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+}
+
+.map_image .is-active path {
+    fill: rgb(108, 108, 247);
+}
+
+.map_list a {
+    float: right;
+    width: 40%;
+}
+
+.map_list a.is-active {
+    color: rgb(108, 108, 247);
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[remote "origin"]
+	url = git@rendu-git.etna-alternance.net:module-8099/activity-44518/group-876160.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

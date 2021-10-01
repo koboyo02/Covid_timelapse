@@ -1,0 +1,481 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  /*display: flex;*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*min-height: 100vh;*/
+}
+
+form {
+  margin-left: 1200px;
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+#recherche {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 30%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  /*padding: 7px 0;*/
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+#recherche::placeholder {
+  color: #fff;
+}
+
+#recherche:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #ff0062, #00ffff);
+  border-image-slice: 1;
+}
+
+#departement {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 30%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  /*padding: 7px 0;*/
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+#departement::placeholder {
+  color: #fff;
+}
+
+#departement:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #ff0062, #00ffff);
+  border-image-slice: 1;
+}
+
+#button {
+  color: #ff0062;
+}
+
+.map_image {
+  width: 50%;
+  float: left;
+}
+
+.map_image path {
+  fill: blue;
+  stroke: aliceblue;
+  stroke-width: 1px;
+  transition: fill 0.3s;
+}
+
+.map_image .is-active path {
+  fill: rgb(108, 108, 247);
+}
+
+/*Un petit ajout de ma part */
+.map_image .is-active #FR-Ain {
+  fill: red;
+}
+
+.map_image .is-active #FR-Aisne {
+  fill: aqua;
+}
+
+.map_image .is-active #FR-Allier {
+  fill: yellow;
+}
+
+.map_image .is-active #FR-Alpes-de-Haute-Provence {
+  fill: greenyellow;
+}
+
+.map_image .is-active #FR-Hautes-Alpes {
+  fill: yellowgreen;
+}
+
+.map_image .is-active #FR-Alpes-Maritimes {
+  fill: blue;
+}
+
+.map_image .is-active #FR-Ardeche {
+  fill: blueviolet;
+}
+
+.map_image .is-active #FR-Ardennes {
+  fill: brown;
+}
+
+.map_image .is-active #FR-Ariege {
+  fill: green;
+}
+
+.map_image .is-active #FR-Aube {
+  fill: tomato;
+}
+
+.map_image .is-active #FR-Aveyron {
+  fill: chartreuse;
+}
+
+.map_image .is-active #FR-Bouches-du-Rhone {
+  fill: chocolate;
+}
+
+.map_image .is-active #FR-Calvados {
+  fill: coral;
+}
+
+.map_image .is-active #FR-Cantal {
+  fill: fuchsia;
+}
+
+.map_image .is-active #FR-Charente {
+  fill: red;
+}
+
+.map_image .is-active #FR-Cher {
+  fill: crimson;
+}
+
+.map_image .is-active #FR-Correze {
+  fill: yellowgreen;
+}
+
+.map_image .is-active #FR-Corse-du-Sud {
+  fill: darkblue;
+}
+
+.map_image .is-active #FR-Haute-Corse {
+  fill: darkcyan;
+}
+
+.map_image .is-active #FR-Cote-d-Or {
+  fill: darkgoldenrod;
+}
+
+.map_image .is-active #FR-Cotes-d-Armor {
+  fill: yellow;
+}
+
+.map_image .is-active #FR-Creuse {
+  fill: darkgreen;
+}
+
+.map_image .is-active #FR-Dordogne {
+  fill: violet;
+}
+
+.map_image .is-active #FR-Doubs {
+  fill: darkmagenta;
+}
+
+.map_image .is-active #FR-Drome {
+  fill: rgb(141, 204, 33);
+}
+
+.map_image .is-active #FR-Eure {
+  fill: rgb(44, 16, 226);
+}
+
+.map_image .is-active #FR-Finistere {
+  fill: rgb(21, 238, 241);
+}
+
+.map_image .is-active #FR-Gard {
+  fill: darkviolet;
+}
+
+.map_image .is-active #FR-Haute-Garonne {
+  fill: deeppink;
+}
+
+.map_image .is-active #FR-Gers {
+  fill: deepskyblue;
+}
+
+.map_image .is-active #FR-Gironde {
+  fill: rgb(216, 39, 39);
+}
+
+.map_image .is-active #FR-Herault {
+  fill: dodgerblue;
+}
+
+.map_image .is-active #FR-Ille-et-Vilaine {
+  fill: firebrick;
+}
+
+.map_image .is-active #FR-Indre {
+  fill: rgb(238, 163, 13);
+}
+
+.map_image .is-active #FR-Isere {
+  fill: forestgreen;
+}
+
+.map_image .is-active #FR-Jura {
+  fill: fuchsia;
+}
+
+.map_image .is-active #FR-Landes {
+  fill: rgb(20, 20, 20);
+}
+
+.map_image .is-active #FR-Loir-et-Cher {
+  fill: rgb(12, 12, 223);
+}
+
+.map_image .is-active #FR-Loire {
+  fill: gold;
+}
+
+.map_image .is-active #FR-Haute-Loire {
+  fill: goldenrod;
+}
+
+.map_image .is-active #FR-Loire-Atlantique {
+  fill: rgb(24, 23, 23);
+}
+
+.map_image .is-active #FR-Loiret {
+  fill: green;
+}
+
+.map_image .is-active #FR-Lot {
+  fill: greenyellow;
+}
+
+.map_image .is-active #FR-Lozere {
+  fill: rgb(22, 245, 22);
+}
+
+.map_image .is-active #Maine-et-Loire {
+  fill: hotpink;
+}
+
+.map_image .is-active #FR-Manche {
+  fill: indianred;
+}
+
+.map_image .is-active #FR-Marne {
+  fill: rgb(136, 16, 221);
+}
+
+.map_image .is-active #FR-Haute-Marne {
+  fill: rgb(219, 219, 27);
+}
+
+.map_image .is-active #FR-Mayenne {
+  fill: rgb(233, 211, 16);
+}
+
+.map_image .is-active #FR-Meurthe-et-Moselle {
+  fill: rgb(33, 33, 206);
+}
+
+.map_image .is-active #FR-Meuse {
+  fill: rgb(212, 36, 95);
+}
+
+.map_image .is-active #FR-Morbihan {
+  fill: lawngreen;
+}
+
+.map_image .is-active #FR-Moselle {
+  fill: rgb(12, 12, 10);
+}
+
+.map_image .is-active #FR-Nievre {
+  fill: lightblue;
+}
+
+.map_image .is-active #FR-Nord {
+  fill: rgb(228, 228, 33);
+}
+
+.map_image .is-active #FR-Oise {
+  fill: fuchsia;
+}
+
+.map_image .is-active #FR-Orne {
+  fill: rgb(12, 11, 12);
+}
+
+.map_image .is-active #FR-Pas-de-Calais {
+  fill: orangered;
+}
+
+.map_image .is-active #FR-Puy-de-Dome {
+  fill: orange;
+}
+
+.map_image .is-active #FR-Pyrenees-Atlantiques {
+  fill: red;
+}
+
+.map_image .is-active #FR-Hautes-Pyrenees {
+  fill: rgb(14, 2, 2);
+}
+
+.map_image .is-active #FR-Pyrenees-Orientales {
+  fill: rgb(228, 228, 33);
+}
+
+.map_image .is-active #FR-Bas-Rhin {
+  fill: rgb(21, 238, 241);
+}
+
+.map_image .is-active #FR-Haut-Rhin {
+  fill: yellow;
+}
+
+.map_image .is-active #FR-Rhone {
+  fill: fuchsia;
+}
+
+.map_image .is-active #FR-Haute-Saone {
+  fill: green;
+}
+
+.map_image .is-active #FR-Saone-et-Loire {
+  fill: greenyellow;
+}
+
+.map_image .is-active #FR-Sarthe {
+  fill: red;
+}
+
+.map_image .is-active #FR-Savoie {
+  fill: rgb(0, 255, 55);
+}
+
+.map_image .is-active #FR-Haute-Savoie {
+  fill: rgb(1, 10, 3);
+}
+
+.map_image .is-active #FR-Ville de Paris {
+  fill: rgb(30, 230, 73);
+}
+
+.map_image .is-active #FR-Seine-Maritime {
+  fill: rgb(230, 30, 90);
+}
+
+.map_image .is-active #FR-Seine-et-Marne {
+  fill: rgb(30, 230, 47);
+}
+
+.map_image .is-active #FR-Yvelines {
+  fill: red;
+}
+
+.map_image .is-active #FR-Deux-Sevres {
+  fill: rgb(14, 13, 13);
+}
+
+.map_image .is-active #FR-Somme {
+  fill: rgb(223, 32, 32);
+}
+
+.map_image .is-active #FR-Tarn {
+  fill: yellow;
+}
+
+.map_image .is-active #FR-Var {
+  fill: yellowgreen;
+}
+
+.map_image .is-active #FR-Vaucluse {
+  fill: black;
+}
+
+.map_image .is-active #FR-Vendee {
+  fill: rgb(216, 44, 44);
+}
+
+.map_image .is-active #FR-Vienne {
+  fill: orange;
+}
+
+.map_image .is-active #FR-Haute-Vienne {
+  fill: rgb(12, 8, 1);
+}
+
+.map_image .is-active #FR-Vosges {
+  fill: violet;
+}
+
+.map_image .is-active #FR-Yonne {
+  fill: rgb(145, 14, 145);
+}
+
+.map_image .is-active #FR-Territoire-de-Belfort {
+  fill: yellowgreen;
+}
+
+.map_image .is-active #FR-Essonne {
+  fill: yellow;
+}
+.map_image .is-active #FR-Hauts-de-Seine {
+  fill: red;
+}
+
+.map_image .is-active #FR-Seine-Saint-Denis {
+  fill: green;
+}
+
+.map_image .is-active #FR-Val-de-Marne {
+  fill: greenyellow;
+}
+
+.map_image .is-active #FR-Val-d-Oise {
+  fill: red;
+}
+/*fin de mon ajout */
+.map_list a {
+  float: right;
+  width: 40%;
+}
+
+.map_list a.is-active {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.table {
+  /*padding-top: 10px;*/
+  float: -150px;
+  border-radius: 2px;
+  /*width: 1%;*/
+  margin: 0px auto;
+  /*display: none;*/
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  /*float: none;*/
+}
